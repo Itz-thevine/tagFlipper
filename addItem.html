@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TagFlipper</title>
+        <link rel="stylesheet" href="addItem.css">
+    </head>
+    <body>
+        <section class="main">
+            <div id="overlay">
+                <div id="mainBorder">
+                    <div class="objects">
+                        
+                        <!-- div for the nav-->
+                        <div class="nav">
+                            <div class="navLogo">
+                                <a href="index.html"><h2>TagFlip.</h2></a>
+                            </div>
+                            <div class="navLinks">
+                                <ul class="links">
+                                    <li class="item removeAll"><h3>Remove All<hr class="navH"></h3></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- div for the object section -->
+                        <div class="object" >
+                            <div class="objectDetail">
+                                <form name="myForm" action="addItem.html" method="post" class="collect" onsubmit="validation()">
+                                    <input type="text" name="tagTitle" placeholder="Enter Tag Title" rows="10" cols="10" class="inputEdit" id="tagTitle">
+                                    <textarea name="tagAbout" placeholder="Enter Detail About Tag" rows="10" cols="10" class="inputEdit" id="tagAbout"></textarea>
+                                    <input type="submit" class="add" value="Add">
+                                </form>
+                            </div>
+
+                            <div class="imageContainer">
+                                <div class="objectImage"></div>
+                                <div class="getImage">
+                                    <span class="spanTxt">Drag and Drop Image, or &nbsp; </span> <span class="button item">Click </span><span class="spanTxtTwo">&nbsp; <i>(preferably png)</i></span>
+                                    <input type="file" class="file" hidden>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <!-- div for the lower section -->
+                        <div class="lowerPart">
+                            <div class="socialMedias">
+                                <ul class="socialMedia">
+                                    <li class="socialHover"><a href="#" class="linkedin"></a></li>
+                                    <li class="socialHover"><a href="#" class="insta"></a></li>
+                                    <li class="socialHover"><a href="#" class="twitter"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>

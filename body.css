@@ -1,0 +1,399 @@
+*{
+    position: relative;
+}
+body{
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #c1272d;
+    position: absolute;
+    z-index: 1;
+}
+#overlay{
+    background: url('SVG/Artboard\ 1.svg');
+    position: absolute;
+    z-index:2;
+    height: inherit;
+    width: inherit;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mainBorder{
+    position: relative;
+    z-index: 3;
+    margin: 2%;
+    border: 3px solid white;
+    border-radius: 20px;
+    height: 92vh;
+
+}
+.objects{
+    height: 100%;
+    width: 100% ;
+}
+
+.nav{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 10% 0 10%;
+    justify-content: space-between;
+}
+
+.navLogo{
+    display: flex;
+    width: auto;
+    vertical-align: middle;
+}
+
+
+.navLogo > a{
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.navLinks{
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+}
+
+.links{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10%;
+    width: inherit;
+    justify-content: flex-end;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+
+.item > a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60%;
+}
+.item > h3{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70%;
+}
+.navH{
+    display: none;
+}
+
+/* hovers */    
+
+.item:hover h3{
+    margin-bottom: 0;
+    transform: translateY(-5px);
+    transition:transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+    cursor: pointer;
+}
+.item:hover .navH{
+    display: flex;
+    margin-left: 0;
+    height: 1px;
+    background: white;
+    animation: navAni 1s forwards;
+
+}
+
+@keyframes navAni{
+    from{
+        transform: scale(0.6);
+        text-align: left;
+        transition:  transform 0.4s ease-in;
+    }
+    to{
+        transform: scale(0);
+        text-align: left;
+        transition: transform 0.4s ease-out;
+    }
+}
+
+/* object section of the code */
+.object{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0 10% 0 10%;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.ObjectDetail{
+    display: flex;
+}
+
+#objectTitle{
+    display: flex;
+}
+
+#objectTitle > h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bol;
+    font-size: 120;
+    margin-bottom: 0;
+}
+#objectAbout{
+    width: 33vw;
+}
+
+#objectAbout > p{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0;
+}
+
+.start >p{
+    margin: 0;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+.start{
+    background: white;
+    padding: 3%;
+    display: flex;
+    width: 15%;
+    border : 3px solid white;
+    justify-content: space-around;
+    border-radius: 5px;
+    height: 3%;
+    align-items: center;
+}
+
+.start:hover {
+    cursor: pointer;
+    width: 15%;
+    border: 3px solid white;
+    border-radius: 5px;
+    height: 3%;
+    align-items: center;
+    animation: startHov 0.6s forwards;
+}
+
+@keyframes startHov{
+    from{
+        transform: translateY(0);
+        transition:transform 0.6s cubic-bezier(0.5, 0, 0.75, 0);
+        opacity: 80%;
+    }
+    to{
+        transform: translateY(-10%);
+    }
+}
+
+.objectImage{
+    background: url('resources/bicycle.png');
+    width: 500px;
+    height: 470px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center !important;
+    display: flex;
+}
+
+/* lower section */
+.lowerPart{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 10% 0 10%;
+    justify-content: space-between;
+    width: auto;
+}
+.socialMedias {
+    width: 40%;
+}
+
+.socialMedia{
+    padding: 0 0 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15%;
+    width: 40%;
+}
+
+.socialMedia > li{
+    display: flex;
+}
+
+.linkedin {
+    background: url('1x/linkedin.png');
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    display: flex;
+}
+
+.insta {
+    background: url('1x/insta.png');
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    display: flex;
+}
+
+.twitter {
+    background: url('1x/twitter.png');
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    display: flex;
+}
+
+.socialHover:hover{
+    transform: translateY(-7px);
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.action{
+    position: absolute;
+    display: flex;
+    width: 60%;
+    bottom: 20%;
+    flex-direction: column;
+    right: 0px;
+}
+.actionTop{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 1%;
+}
+
+.actionTopOne{
+    display: flex;
+    background: url('svg/refresh.svg');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+.actionTopTwo{
+    display: flex;
+    background: url('svg/Artboard\ 7.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.actionBottom{
+    display: flex;
+    top: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.actionBottomOne{
+    background: url('svg/previous.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 25px;
+    background-size: contain;
+}
+.actionBottomTwo{
+    position: relative;
+    width: 90px;
+    height: 75px;
+}
+.actionOverlay{
+    background: url('svg/contain.svg');
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 100%;
+    background-size: contain;
+    opacity: 50%;
+    position: absolute;
+}
+
+.actionItself{
+    background: url('resources/bicycle.png');
+    background-repeat: no-repeat;
+    width: 70%;
+    margin-left: 12px;
+    height: 100%;
+    background-size: contain;
+    position: absolute;
+    background-position-x: center;
+    background-position-y: center;
+}
+.actionBottomThree{
+    background: url('svg/next.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 25px;
+    background-size: contain;
+}
+
+.aBtn:hover{
+    cursor: pointer;
+    /* width: 15px;
+    height: 25px; */
+    background-size: contain;
+    transform: scale(1.4);
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+
+.actionTopOne:hover{
+    cursor: pointer;
+    animation: rotB 1s;
+}
+
+.actionTopTwo:hover{
+    cursor: pointer;
+    animation: rotF 1s;
+}
+
+@keyframes rotB{
+    from{
+        transform: rotate(0);
+        transform-origin: center;
+        transition: transform 0.6s cubic-bezier(0, 0.55, 0.45, 1);
+    }
+    to{
+        transform: rotate(-360deg);
+        transform-origin: center;
+        transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+}
+
+@keyframes rotF{
+    from{
+        transform: rotate(0);
+        transform-origin: center;
+        transition: transform 0.6s cubic-bezier(0, 0.55, 0.45, 1);
+    }
+    to{
+        transform: rotate(360deg);
+        transform-origin: center;
+        transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+}
+
